@@ -115,14 +115,28 @@
             transform: scale(1.01);
             box-shadow: 0 0 15px rgba(179, 136, 255, 0.3);
         }
+        
+        .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem 1rem;
+        }
 
         .project-title {
             font-size: 1.5rem;
             font-weight: bold;
             color: #cdd6f4;
+            margin: 0;
+            flex: 1 1 auto;
+        }
+
+        .project-badges {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            flex: 0 0 auto;
         }
 
         .project-badge {
@@ -268,9 +282,12 @@
                 <img src="https://img.itch.zone/aW1nLzE0OTEyMTY0LnBuZw==/315x250%23c/%2Bh2XD%2B.png"
                     alt="MineSweeper Sandbox Cover" class="project-image" />
                 <div class="project-text">
-                    <h2 class="project-title stamped">
-                        MineSweeper Sandbox
-                    </h2>
+                    <div class="project-header">
+                        <h2 class="project-title stamped">
+                            MineSweeper Sandbox
+                        </h2>
+                        <div class="project-badges"></div>
+                    </div>
                     <p>A clone and re-skin of the game we all know and love: Minesweeper. Including some visual and sound effects
                         and the ability to choose custom grid sizes. Available on Windows, Linux and Android. </p>
                     <div class="project-links">
@@ -299,11 +316,15 @@
                 <img src="images/Out of the Gutter (Cover).png" alt="Out Of The Gutter Screenshot"
                     class="project-image" />
                 <div class="project-text">
-                    <h2 class="project-title">
-                        Out Of The Gutter
-                        <span class="project-badge unfinished">Unfinished</span>
-                        <span class="project-badge unfinished">Hackathon</span>
-                    </h2>
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            Out Of The Gutter
+                        </h2>
+                        <div class="project-badges">
+                            <span class="project-badge unfinished">Unfinished</span>
+                            <span class="project-badge unfinished">Hackathon</span>
+                        </div>
+                    </div>
                     <p>
                         Slimes in a sewer system compete against each other in a variety of minigames
                         such as racing to the exit and hot potato. Out Of The Gutter is a peer-to-peer
@@ -338,11 +359,15 @@
             <div class="project-content">
                 <img src="images/Clock Racer (Cover).png" alt="Gravity Shift Screenshot" class="project-image" />
                 <div class="project-text">
+                    <div class="project-header">
                     <h2 class="project-title">
                         Clock Racer
-                        <span class="project-badge unfinished">Unfinished</span>
-                        <span class="project-badge unfinished">Hackathon</span>
                     </h2>
+                        <div class="project-badges">
+                            <span class="project-badge unfinished">Unfinished</span>
+                            <span class="project-badge unfinished">Hackathon</span>
+                        </div>
+                    </div>
                     <p>
                         A multiplayer game where snails work together to
                         pass through obstacle courses within a time limit. Each snail is given a different special
@@ -379,11 +404,15 @@
                 <img src="images/SimpleNeuralNetwork (Cover).png" alt="SimpleNeuralNetwork Cover"
                     class="project-image" />
                 <div class="project-text">
+                    <div class="project-header">
                     <h2 class="project-title">
                         SimpleNeuralNetwork
-                        <span class="project-badge unfinished">Main Project</span>
-                        <span class="project-badge unfinished">Ongoing</span>
                     </h2>
+                        <div class="project-badges">
+                            <span class="project-badge unfinished">Main Project</span>
+                            <span class="project-badge unfinished">Ongoing</span>
+                        </div>
+                    </div>
                     <p>
                         A neural network framework written in Java featuring a basic evolutionary training algorithm,
                         JSON
@@ -410,11 +439,15 @@
             <div class="project-content">
                 <img src="images/NeuralRaceCars (Cover).png" alt="Gravity Shift Screenshot" class="project-image" />
                 <div class="project-text">
+                    <div class="project-header">
                     <h2 class="project-title">
                         NeuralRaceCars
-                        <span class="project-badge unfinished">Main Project (Linked)</span>
-                        <span class="project-badge unfinished">Ongoing</span>
                     </h2>
+                        <div class="project-badges">
+                            <span class="project-badge unfinished">Main Project (Linked)</span>
+                            <span class="project-badge unfinished">Ongoing</span>
+                        </div>
+                    </div>
                     <p>
                         A 2D top-down racing game written in Godot with the goal of training neural networks to race and
                         drift cars around a track.
