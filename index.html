@@ -180,6 +180,11 @@
             text-decoration: underline;
         }
 
+        .project a.disabled {
+            pointer-events: none;
+            color: gray;
+        }
+
         .project-content {
             display: flex;
             align-items: flex-start;
@@ -334,9 +339,9 @@
                         </div>
                     </div>
                     <p>
+                        Out Of The Gutter is a peer-to-peer multiplayer game made using Godot.
                         Slimes in a sewer system compete against each other in a variety of minigames
-                        such as racing to the exit and hot potato. Out Of The Gutter is a peer-to-peer
-                        multiplayer game made using Godot. The game was conceived and brought to it's
+                        such as racing to the exit and hot potato. The game was conceived and brought to it's
                         current state during a hackathon as a collaboration between <a
                             href="https://github.com/Koloss0">Koloss0</a>, <a
                             href="https://github.com/nigerianpickle">nigerianpickle</a>, <a
@@ -370,7 +375,7 @@
                 <div class="project-text">
                     <div class="project-header">
                         <h2 class="project-title">
-                            Clock Racer
+                            Clock Racers
                         </h2>
                         <div class="project-badges">
                             <span class="project-badge unfinished">Unfinished</span>
@@ -378,10 +383,10 @@
                         </div>
                     </div>
                     <p>
-                        A multiplayer game where snails work together to
-                        pass through obstacle courses within a time limit. Each snail is given a different special
-                        ability and the players must work together, making use of their unique abilities, in order to
-                        proceed through each level. The game is a peer-to-peer multiplayer game made using Godot.
+                        Clock Racers is a peer-to-peer multiplayer game made using Godot.
+                        Snails with differing unique abilities must work together to pass through an obstacle course
+                        within a given time limit. Each snail receives one or more abilities that, in combination with
+                        one or more abilities of it's peers, can be used to overcome obstacles and proceed to the exit.
                     </p>
                     <p>
                         Clock racer was conceived and brought to it's
@@ -393,7 +398,7 @@
                             href="https://github.com/theCYBRIX">myself</a>.
                     </p>
                     <p>
-                        In it's current state, the game has functional networking and partially completed first level.
+                        In it's current state, the game has functional networking and a partially completed first level.
                     </p>
                     <div class="project-links">
                         <a href="https://github.com/mcinn-ng/DevHacks2025" target="_blank">GitHub</a>
@@ -432,7 +437,7 @@
                         support GPU compute.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/theCYBRIX/SimpleNeuralNetwork" target="_blank">GitHub</a>
+                        <a href="https://github.com/theCYBRIX/SimpleNeuralNetwork" target="_blank" class="disabled">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -466,7 +471,7 @@
                         training neural networks to both race and drift, but still requires a lot of polish.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/theCYBRIX/NeuralRaceCars" target="_blank">GitHub</a>
+                        <a href="https://github.com/theCYBRIX/NeuralRaceCars" target="_blank" class="disabled">GitHub</a>
                     </div>
                 </div>
             </div>
