@@ -1,103 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Portfolio</title>
+    <style>
+        :root {
+            --bg-dark: #0e0e14;
+            --text-light: #eaeaff;
+            --accent1: #00bfff;
+            /* blue */
+            --accent2: #ff69b4;
+            /* pink */
+            --accent3: #b388ff;
+            /* purple-ish */
+            --card-bg: #1a1a25;
+        }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-      padding-top: 100px;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-top: 120px;
+        }
 
-    .header-content {
-      display: flex;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #2b63c3, #ff69b4, #b388ff);
+            padding: 2px 0;
+            z-index: 1000;
+        }
 
-    .profile-pic {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 20px;
-    }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #12121a;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 16px 20px;
+        }
 
-    .name-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right, #00bfff, #ff69b4, #b388ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    .projects {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .project {
-      background-color: #fff;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
+        .profile-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #666;
+        }
 
-    .project h2 {
-      margin-bottom: 10px;
-    }
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
 
-    .project p {
-      font-size: 0.95rem;
-    }
-  </style>
+        .profile-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent3);
+            margin-right: 15px;
+        }
+
+        .name-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .projects {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .project {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--accent2);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.15);
+            transition: transform 0.2s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 15px rgba(179, 136, 255, 0.3);
+        }
+
+        .project h2 {
+            margin-bottom: 10px;
+            color: var(--accent1);
+        }
+
+        .project p {
+            font-size: 0.95rem;
+        }
+
+        .project a {
+            color: var(--accent2);
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        .project-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-image {
+            width: 180px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
+        }
+
+        .project-text {
+            flex: 1;
+            min-width: 250px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="header-content">
-      <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-pic">
-      <div class="name-title">Jane Doe – Gameplay Programmer</div>
-    </div>
-  </header>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://github.com/theCYBRIX.png?size=100" alt="Profile Picture" class="profile-pic" />
+                <div class="logo">theCYBRIX</div>
+            </div>
+            <div class="profile-info">
+                <div class="name-title">Solo Dev & Tinkerer</div>
+            </div>
+        </div>
+    </header>
 
-  <main class="projects">
-    <div class="project">
-      <h2>Pixel Runner</h2>
-      <p>A retro-style endless runner built in Unity. Features procedural level generation, power-ups, and pixel-perfect collision detection. <a href="#">GitHub Repo</a></p>
-    </div>
-
-    <div class="project">
-      <h2>Neon Tactics</h2>
-      <p>A turn-based cyberpunk tactics game. Designed all core combat logic and AI behavior trees in C#. <a href="#">GitHub Repo</a></p>
-    </div>
-
-    <div class="project">
-      <h2>Gravity Shift</h2>
-      <p>Physics-based puzzle platformer where you manipulate gravity to solve puzzles. Built using Unity 2D physics and ScriptableObjects. <a href="#">GitHub Repo</a></p>
-    </div>
-  </main>
+    <main class="projects">
+        <div class="project">
+            <div class="project-content">
+            <img src="https://img.itch.zone/aW1nLzE0OTEyMTY0LnBuZw==/315x250%23c/%2Bh2XD%2B.png" alt="MineSweeper Sandbox Cover" class="project-image" />
+            <div class="project-text">
+                <h2>MineSweeper Sandbox</h2>
+                <p>A reskin of the game we all know and love: Minesweeper. Including some visual and sound effects and the
+            ability to choose custom grid sizes. <a href="#">GitHub Repo</a></p>
+                
+                </p>
+                <a href="https://thecybrix.itch.io/mine-sweeper">Released on Itch.io</a></p>
+                <iframe frameborder="0" src="https://itch.io/embed/2493446?dark=true" width="552" height="167"><a href="https://thecybrix.itch.io/mine-sweeper">MineSweeper Sandbox by CYBRIX</a></iframe>
+            </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-content">
+            <img src="images/neon-tactics.gif" alt="Neon Tactics Screenshot" class="project-image" />
+            <div class="project-text">
+                <h2>Neon Tactics</h2>
+                <p>
+                A turn-based cyberpunk tactics game. Designed all core combat logic and AI behavior
+                trees in C#.
+                <a href="#">GitHub Repo</a>
+                </p>
+            </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-content">
+            <img src="images/gravity-shift.gif" alt="Gravity Shift Screenshot" class="project-image" />
+            <div class="project-text">
+                <h2>Gravity Shift</h2>
+                <p>
+                Physics-based puzzle platformer where you manipulate gravity to solve puzzles.
+                Built using Unity 2D physics and ScriptableObjects.
+                <a href="#">GitHub Repo</a>
+                </p>
+            </div>
+            </div>
+        </div>
+    </main>
 
 </body>
+
 </html>
