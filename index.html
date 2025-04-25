@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 100px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .name-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .projects {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .project {
+      background-color: #fff;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .project h2 {
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-pic">
+      <div class="name-title">Jane Doe – Gameplay Programmer</div>
+    </div>
+  </header>
+
+  <main class="projects">
+    <div class="project">
+      <h2>Pixel Runner</h2>
+      <p>A retro-style endless runner built in Unity. Features procedural level generation, power-ups, and pixel-perfect collision detection. <a href="#">GitHub Repo</a></p>
+    </div>
+
+    <div class="project">
+      <h2>Neon Tactics</h2>
+      <p>A turn-based cyberpunk tactics game. Designed all core combat logic and AI behavior trees in C#. <a href="#">GitHub Repo</a></p>
+    </div>
+
+    <div class="project">
+      <h2>Gravity Shift</h2>
+      <p>Physics-based puzzle platformer where you manipulate gravity to solve puzzles. Built using Unity 2D physics and ScriptableObjects. <a href="#">GitHub Repo</a></p>
+    </div>
+  </main>
+
+</body>
+</html>
