@@ -37,7 +37,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to right, #2b63c3, #ff69b4, #b388ff);
+            background: linear-gradient(to right, #2b63c3, white, #ff69b4, #b388ff);
             padding: 2px 0;
             z-index: 1000;
         }
@@ -57,6 +57,7 @@
             font-weight: bold;
             color: white;
             background: linear-gradient(to right, #00bfff, #ff69b4, #b388ff);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -150,6 +151,69 @@
             flex: 1;
             min-width: 250px;
         }
+
+        .project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.project-links a {
+  color: #89b4fa;
+  background-color: #1e1e2f;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.project-links a:hover {
+  background-color: #313244;
+}
+
+.screenshot-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin-top: 10px;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.screenshot-gallery img {
+  height: 120px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.screenshot-gallery.open {
+  max-height: 200px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toggle-gallery {
+  margin-top: 10px;
+  background: #313244;
+  color: #cdd6f4;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.toggle-gallery:hover {
+  background: #45475a;
+}
+
     </style>
 </head>
 
@@ -170,47 +234,72 @@
     <main class="projects">
         <div class="project">
             <div class="project-content">
-            <img src="https://img.itch.zone/aW1nLzE0OTEyMTY0LnBuZw==/315x250%23c/%2Bh2XD%2B.png" alt="MineSweeper Sandbox Cover" class="project-image" />
-            <div class="project-text">
-                <h2>MineSweeper Sandbox</h2>
-                <p>A reskin of the game we all know and love: Minesweeper. Including some visual and sound effects and the
-            ability to choose custom grid sizes. <a href="#">GitHub Repo</a></p>
-                
-                </p>
-                <a href="https://thecybrix.itch.io/mine-sweeper">Released on Itch.io</a></p>
-                <iframe frameborder="0" src="https://itch.io/embed/2493446?dark=true" width="552" height="167"><a href="https://thecybrix.itch.io/mine-sweeper">MineSweeper Sandbox by CYBRIX</a></iframe>
+                <img src="https://img.itch.zone/aW1nLzE0OTEyMTY0LnBuZw==/315x250%23c/%2Bh2XD%2B.png"
+                    alt="MineSweeper Sandbox Cover" class="project-image" />
+                <div class="project-text">
+                    <h2>MineSweeper Sandbox</h2>
+                    <p>A reskin of the game we all know and love: Minesweeper. Including some visual and sound effects
+                        and the
+                        ability to choose custom grid sizes. Available on Windows, Linux and Android. </p>
+                    <div class="project-links">
+                        <a href="https://github.com/yourrepo" target="_blank">GitHub</a>
+                        <a href="https://thecybrix.itch.io/mine-sweeper" target="_blank">Play on Itch.io</a>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-        
-        <div class="project">
-            <div class="project-content">
-            <img src="images/neon-tactics.gif" alt="Neon Tactics Screenshot" class="project-image" />
-            <div class="project-text">
-                <h2>Neon Tactics</h2>
-                <p>
-                A turn-based cyberpunk tactics game. Designed all core combat logic and AI behavior
-                trees in C#.
-                <a href="#">GitHub Repo</a>
-                </p>
-            </div>
+            <button class="toggle-gallery">View Gallery</button>
+            <div class="screenshot-gallery">
+                <img src="images/screen1.png" alt="Screenshot 1" />
+                <img src="images/screen2.png" alt="Screenshot 2" />
+                <img src="images/screen3.png" alt="Screenshot 3" />
             </div>
         </div>
-        
+
         <div class="project">
             <div class="project-content">
-            <img src="images/gravity-shift.gif" alt="Gravity Shift Screenshot" class="project-image" />
-            <div class="project-text">
-                <h2>Gravity Shift</h2>
-                <p>
-                Physics-based puzzle platformer where you manipulate gravity to solve puzzles.
-                Built using Unity 2D physics and ScriptableObjects.
-                <a href="#">GitHub Repo</a>
-                </p>
+                <img src="images/neon-tactics.gif" alt="Neon Tactics Screenshot" class="project-image" />
+                <div class="project-text">
+                    <h2>Out of the gutter</h2>
+                    <p>
+                        A peer-to-peer multiplayer game made using Godot that revolves around slimes in a sewer system
+                        competing agains each other in a variety of minigames. The game was conceved and brought to it's
+                        current state during a hackathon as a colaboration between <a
+                            href="https://github.com/Koloss0">Koloss0</a>, <a
+                            href="https://github.com/nigerianpickle">nigerianpickle</a>, <a
+                            href="https://github.com/Kingjoker4life">Kingjoker4life</a>, <a
+                            href="https://github.com/JordonH03">JordonH03</a> and <a
+                            href="https://github.com/theCYBRIX">myself</a>.
+                    </p>
+                    <a href="#">GitHub Repo</a>
+
+                </div>
             </div>
+        </div>
+
+        <div class="project">
+            <div class="project-content">
+                <img src="images/gravity-shift.gif" alt="Gravity Shift Screenshot" class="project-image" />
+                <div class="project-text">
+                    <h2>Gravity Shift</h2>
+                    <p>
+                        Physics-based puzzle platformer where you manipulate gravity to solve puzzles.
+                        Built using Unity 2D physics and ScriptableObjects.
+                        <a href="#">GitHub Repo</a>
+                    </p>
+                </div>
             </div>
         </div>
     </main>
+
+    <script>
+        document.querySelectorAll('.toggle-gallery').forEach(button => {
+          button.addEventListener('click', () => {
+            const gallery = button.nextElementSibling;
+            gallery.classList.toggle('open');
+            button.textContent = gallery.classList.contains('open') ? 'Hide Gallery' : 'View Gallery';
+          });
+        });
+    </script>
 
 </body>
 
