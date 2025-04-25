@@ -10,11 +10,8 @@
             --bg-dark: #0e0e14;
             --text-light: #eaeaff;
             --accent1: #00bfff;
-            /* blue */
             --accent2: #ff69b4;
-            /* pink */
             --accent3: #b388ff;
-            /* purple-ish */
             --card-bg: #1a1a25;
         }
 
@@ -100,7 +97,59 @@
                 margin-left: 0;
             }
         }
+        
+        .about-me {
+            margin: 3rem auto;
+            max-width: 800px;
+            padding: 1.5rem;
+            background-color: #2a2a3b;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+            color: #cdd6f4;
+        }
 
+        .about-me h2 {
+            font-size: 1.8rem;
+            color: #89b4fa;
+            margin-bottom: 1rem;
+        }
+
+        .about-me p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .language-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .language-icons img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .language-icons img:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+
+        .section-divider {
+            margin: 4rem auto;
+            border: none;
+            height: 2px;
+            width: 60%;
+            background: linear-gradient(to right, #89b4fa, #f38ba8);
+            border-radius: 999px;
+            opacity: 0.3;
+        }
 
         .projects {
             max-width: 900px;
@@ -144,7 +193,8 @@
             flex-wrap: wrap;
             gap: 0.4rem;
             flex: 0 0 auto;
-            margin-top: 0.5rem;
+            padding-top: 0;
+            margin-top: 0;
             margin-bottom: 0.75rem;
         }
 
@@ -283,12 +333,34 @@
             <img src="https://github.com/theCYBRIX.png?size=100" alt="Profile Picture" class="profile-pic" />
             <div class="profile-info">
                 <div class="logo">theCYBRIX</div>
-                <div class="name-title">Solo Dev & Tinkerer</div>
+                <div class="name-title">Game Dev & Tinkerer</div>
             </div>
         </div>
     </header>
 
+    <section class="about-me">
+        <h2>About Me</h2>
+        <p>
+            I'm a mostly self-taught game developer with a passion for gameplay programming and creative tinkering.
+            I enjoy experimenting with mechanics, participating in hackathons, and building polished mini-projects
+            related to whatever interests me at the time.
+            Always learning, always building!
+        </p>
+        <div class="language-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot / GDScript" title="Godot / GDScript" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="PowerShell" title="PowerShell" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
+        </div>
+          
+    </section>
+      
+    <hr class="section-divider" />
+
     <main class="projects">
+
         <div class="project">
             <div class="project-content">
                 <img src="https://img.itch.zone/aW1nLzE0OTEyMTY0LnBuZw==/315x250%23c/%2Bh2XD%2B.png"
@@ -389,7 +461,7 @@
                         one or more abilities of it's peers, can be used to overcome obstacles and proceed to the exit.
                     </p>
                     <p>
-                        Clock racer was conceived and brought to it's
+                        Clock Racers was conceived and brought to it's
                         current state during a hackathon as a collaboration between <a
                             href="https://github.com/KarinP03">KarinP03</a>, <a
                             href="https://github.com/tsuki0272">tsuki0272</a>, <a
