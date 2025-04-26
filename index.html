@@ -35,7 +35,7 @@
             left: 0;
             width: 100%;
             background: linear-gradient(to right, #2b63c3, white, #ff69b4, #b388ff);
-            padding: 2px 0;
+            padding: 3px 2px;
             z-index: 1000;
         }
 
@@ -146,6 +146,7 @@
             border: none;
             height: 2px;
             width: 60%;
+            max-width: 900px;
             background: linear-gradient(to right, #89b4fa, #f38ba8);
             border-radius: 999px;
             opacity: 0.3;
@@ -270,10 +271,20 @@
             font-weight: 500;
             transition: background-color 0.2s ease;
             white-space: nowrap;
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .project-links a:hover {
             background-color: #313244;
+        }
+
+        .project-links a .icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
         }
 
         .screenshot-gallery {
@@ -344,7 +355,7 @@
             I'm a mostly self-taught game developer with a passion for gameplay programming and creative tinkering.
             I enjoy experimenting with mechanics, participating in hackathons, and building polished mini-projects
             related to whatever interests me at the time.
-            Always learning, always building!
+            Always learning!
         </p>
         <div class="language-icons">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
@@ -373,8 +384,8 @@
                         </h2>
                     </div>
                     <p>A clone and re-skin of the game we all know and love: Minesweeper. Including some visual and
-                        sound effects
-                        and the ability to choose custom grid sizes. Available on Windows, Linux and Android. </p>
+                        sound effects and the ability to choose custom grid sizes, pause, resume and even save game states for later.
+                        Available on Windows, Linux and Android. </p>
                     <div class="project-links">
                         <a href="https://github.com/theCYBRIX/MineSweeper" target="_blank">GitHub</a>
                         <a href="https://thecybrix.itch.io/mine-sweeper" target="_blank">Play on Itch.io</a>
@@ -553,6 +564,12 @@
                 <img src="images/NeuralRaceCars - Screenshot 2.png" alt="Screenshot 2" class="gallery-image" />
                 <img src="images/NeuralRaceCars - Screenshot 3.png" alt="Screenshot 3" class="gallery-image" />
             </div> -->
+            <!-- <a href="https://youtube.com/yourvideo" target="_blank" class="youtube-link">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="16" height="16" fill="currentColor">
+                    <path d="M549.655 124.083C534.58 89.746 503.5 64.764 467.175 58.313 421.424 50.454 288 50.454 288 50.454s-133.424 0-179.175 7.859C80.5 64.764 49.42 89.746 34.345 124.083 24 155.196 24 256 24 256s0 100.804 10.345 131.917C49.42 422.254 80.5 447.236 116.825 453.687 162.576 461.546 288 461.546 288 461.546s133.424 0 179.175-7.859c36.325-6.451 67.405-31.433 82.48-66.77C552 356.804 552 256 552 256s0-100.804-2.345-131.917zM232 334.421V177.579L352 256l-120 78.421z"/>
+                </svg>
+                Training Timelapse
+            </a> -->
         </div>
     </main>
 
