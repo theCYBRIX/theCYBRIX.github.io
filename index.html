@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Portfolio</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         :root {
             --bg-dark: #0e0e14;
             --text-light: #eaeaff;
@@ -117,6 +121,31 @@
         .about-me p {
             font-size: 1rem;
             line-height: 1.6;
+        }
+        
+        .about-extra {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-contact-button {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(to right, #89b4fa, #f38ba8);
+            color: #1e1e2f;
+            font-weight: bold;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        .about-contact-button:hover {
+            background: linear-gradient(to right, #f38ba8, #89b4fa);
+            transform: scale(1.05);
+            color: #ffffff;
         }
         
         .language-icons {
@@ -334,6 +363,46 @@
             flex-shrink: 0;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
         }
+
+        .contact-section {
+            margin: 4rem auto;
+            max-width: 800px;
+            padding: 2rem;
+            background-color: #2a2a3b;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            color: #cdd6f4;
+        }
+
+        .contact-section h2 {
+            font-size: 1.8rem;
+            color: #89b4fa;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #89b4fa, #f38ba8);
+            color: #1e1e2f;
+            font-weight: bold;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: linear-gradient(to right, #f38ba8, #89b4fa);
+            color: #ffffff;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 
@@ -358,13 +427,16 @@
             related to whatever interests me at the time.
             Always learning!
         </p>
-        <div class="language-icons">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot / GDScript" title="Godot / GDScript" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="PowerShell" title="PowerShell" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
+        <div class="about-extra">
+            <div class="language-icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot / GDScript" title="Godot / GDScript" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="PowerShell" title="PowerShell" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
+            </div>
+            <a href="#contact" class="about-contact-button">Contact Me</a>
         </div>
           
     </section>
@@ -573,6 +645,12 @@
             </div>
         </div>
     </main>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out if you're interested in collaborating or have any questions!</p>
+        <a href="mailto:dev.cybrix@hotmail.com" class="contact-button">Send me an Email</a>
+    </section>
 
     <script>
         document.querySelectorAll('.toggle-gallery').forEach(button => {
