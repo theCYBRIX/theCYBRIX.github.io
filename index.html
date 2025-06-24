@@ -658,24 +658,24 @@
     </section>
 
     <script>
-    document.querySelectorAll('.toggle-gallery').forEach(button => {
-        button.addEventListener('click', () => {
-            const allButtons = document.querySelectorAll('.toggle-gallery');
-            const allGalleries = document.querySelectorAll('.screenshot-gallery');
+        document.querySelectorAll('.toggle-gallery').forEach(button => {
+            button.addEventListener('click', () => {
+                const allButtons = document.querySelectorAll('.toggle-gallery');
+                const allGalleries = document.querySelectorAll('.screenshot-gallery');
 
-            const gallery = button.nextElementSibling;
-            const isOpen = gallery.classList.contains('open');
+                const gallery = button.nextElementSibling;
+                const isOpen = gallery.classList.contains('open');
 
-            allGalleries.forEach(g => g.classList.remove('open'));
-            allButtons.forEach(b => b.textContent = 'View Gallery');
+                allGalleries.forEach(g => g.classList.remove('open'));
+                allButtons.forEach(b => b.textContent = 'View Gallery');
 
-            if (!isOpen) {
-                gallery.classList.add('open');
-                button.textContent = 'Hide Gallery';
-            }
+                if (!isOpen) {
+                    gallery.classList.add('open');
+                    button.textContent = 'Hide Gallery';
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 
 </body>
