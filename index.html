@@ -376,6 +376,38 @@
             color: #ffffff;
             transform: scale(1.05);
         }
+        
+        .youtube-link-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin-top: 0.5rem;
+        }
+        
+        .youtube-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4em;
+            text-decoration: none;
+            color: inherit;
+            white-space: nowrap;
+        }
+
+        .youtube-logo {
+            width: 26px;
+            height: 16px;
+            background-color: var(--accent2);
+            
+            mask-image: url("images/youtube-logo.png");
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+
+            -webkit-mask-image: url("images/youtube-logo.png");
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            -webkit-mask-position: center;
+        }
     </style>
 </head>
 
@@ -428,7 +460,7 @@
                     </div>
                     <p>A clone and re-skin of the game we all know and love: Minesweeper. Including some visual and
                         sound effects and the ability to choose custom grid sizes, pause, resume and even save game states for later.
-                        Available on Windows, Linux and Android. </p>
+                        Available on Windows, Linux, Android and in the browser. </p>
                     <div class="project-links">
                         <a href="https://github.com/theCYBRIX/MineSweeper" target="_blank">GitHub</a>
                         <a href="https://thecybrix.itch.io/mine-sweeper" target="_blank">Play on Itch.io</a>
@@ -466,8 +498,7 @@
                     </div>
                     <p>
                         A neural network framework written in Java featuring a basic evolutionary training algorithm,
-                        JSON
-                        serialization and deserialization and a custom API for inter-process communication.
+                        JSON serialization and deserialization and a custom API for inter-process communication.
                     </p>
                     <p>
                         The framework is written from the ground up with minimal dependencies and currently does not
@@ -518,12 +549,16 @@
                 <img src="images/NeuralRaceCars - Screenshot 2.png" alt="Screenshot 2" class="gallery-image" />
                 <img src="images/NeuralRaceCars - Screenshot 3.png" alt="Screenshot 3" class="gallery-image" />
             </div> -->
-            <!-- <a href="https://youtube.com/yourvideo" target="_blank" class="youtube-link">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="16" height="16" fill="currentColor">
-                    <path d="M549.655 124.083C534.58 89.746 503.5 64.764 467.175 58.313 421.424 50.454 288 50.454 288 50.454s-133.424 0-179.175 7.859C80.5 64.764 49.42 89.746 34.345 124.083 24 155.196 24 256 24 256s0 100.804 10.345 131.917C49.42 422.254 80.5 447.236 116.825 453.687 162.576 461.546 288 461.546 288 461.546s133.424 0 179.175-7.859c36.325-6.451 67.405-31.433 82.48-66.77C552 356.804 552 256 552 256s0-100.804-2.345-131.917zM232 334.421V177.579L352 256l-120 78.421z"/>
-                </svg>
-                Training Timelapse
-            </a> -->
+            <div class="youtube-link-container">
+                <a href="https://youtu.be/AAaLOqB8M98" target="_blank" class="youtube-link">
+                    <div class="youtube-logo"></div>
+                    Racing Model
+                </a>
+                <a href="https://youtu.be/Q0QwFCsuPZo" target="_blank" class="youtube-link">
+                    <div class="youtube-logo"></div>
+                    Drifting Model
+                </a>
+            </div>
         </div>
 
         <div class="project">
@@ -623,14 +658,25 @@
     </section>
 
     <script>
-        document.querySelectorAll('.toggle-gallery').forEach(button => {
-            button.addEventListener('click', () => {
-                const gallery = button.nextElementSibling;
-                gallery.classList.toggle('open');
-                button.textContent = gallery.classList.contains('open') ? 'Hide Gallery' : 'View Gallery';
-            });
+    document.querySelectorAll('.toggle-gallery').forEach(button => {
+        button.addEventListener('click', () => {
+            const allButtons = document.querySelectorAll('.toggle-gallery');
+            const allGalleries = document.querySelectorAll('.screenshot-gallery');
+
+            const gallery = button.nextElementSibling;
+            const isOpen = gallery.classList.contains('open');
+
+            allGalleries.forEach(g => g.classList.remove('open'));
+            allButtons.forEach(b => b.textContent = 'View Gallery');
+
+            if (!isOpen) {
+                gallery.classList.add('open');
+                button.textContent = 'Hide Gallery';
+            }
         });
-    </script>
+    });
+</script>
+
 
 </body>
 
