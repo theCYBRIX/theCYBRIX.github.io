@@ -14,6 +14,8 @@
             --accent1: #00bfff;
             --accent2: #ff69b4;
             --accent3: #b388ff;
+            --accent1-soft: #89b4fa;
+            --accent2-soft: #f38ba8;
             --card-bg: #1a1a25;
         }
 
@@ -21,6 +23,10 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -36,7 +42,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to right, #2b63c3, white, #ff69b4, #b388ff);
+            background: linear-gradient(to right, #2b63c3, white, var(--accent2), var(--accent3));
             padding: 3px 2px;
             z-index: 1000;
         }
@@ -73,7 +79,7 @@
         .logo {
             font-size: 1.2rem;
             font-weight: bold;
-            background: linear-gradient(to right, #00bfff, #ff69b4, #b388ff);
+            background: linear-gradient(to right, var(--accent1), var(--accent2), var(--accent3));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -103,6 +109,7 @@
         .about-me {
             margin: 3rem auto;
             max-width: 800px;
+            width: calc(100% - 1.3rem);
             padding: 1.5rem;
             background-color: #2a2a3b;
             border-radius: 12px;
@@ -138,7 +145,7 @@
         }
 
         .language-icons img:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
             opacity: 1;
         }
 
@@ -149,7 +156,7 @@
             height: 2px;
             width: 60%;
             max-width: 900px;
-            background: linear-gradient(to right, #89b4fa, #f38ba8);
+            background: linear-gradient(to right, var(--accent1-soft), var(--accent2-soft));
             border-radius: 999px;
             opacity: 0.3;
         }
@@ -265,7 +272,7 @@
         }
 
         .project-links a {
-            color: #89b4fa;
+            color: var(--accent1-soft);
             background-color: #1e1e2f;
             padding: 6px 12px;
             border-radius: 6px;
@@ -340,6 +347,7 @@
         .contact-section {
             margin: 4rem auto;
             max-width: 800px;
+            width: calc(100% - 1rem);
             padding: 2rem;
             background-color: #2a2a3b;
             border-radius: 12px;
@@ -350,7 +358,7 @@
 
         .contact-section h2 {
             font-size: 1.8rem;
-            color: #89b4fa;
+            color: var(--accent1-soft);
             margin-bottom: 1rem;
         }
 
@@ -363,7 +371,7 @@
         .contact-button {
             display: inline-block;
             padding: 0.75rem 1.5rem;
-            background: linear-gradient(to right, #89b4fa, #f38ba8);
+            background: linear-gradient(to right, var(--accent1-soft), var(--accent2-soft));
             color: #1e1e2f;
             font-weight: bold;
             border-radius: 999px;
@@ -372,7 +380,7 @@
         }
 
         .contact-button:hover {
-            background: linear-gradient(to right, #f38ba8, #89b4fa);
+            background: linear-gradient(to right, var(--accent2-soft), var(--accent1-soft));
             color: #ffffff;
             transform: scale(1.05);
         }
@@ -407,6 +415,20 @@
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: contain;
             -webkit-mask-position: center;
+        }
+
+        .back-to-top {
+            margin: auto;
+            max-width: fit-content;
+            cursor: pointer;
+            padding-bottom: 1rem;
+            color: var(--text-light);
+
+            text-decoration: none;
+        }
+
+        .back-to-top:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -659,6 +681,10 @@
         <a href="mailto:dev.cybrix@hotmail.com" class="contact-button">Send me an Email</a>
     </section>
 
+    <p class="back-to-top" onclick="scrollToTop()">
+        Back to top
+    </p>
+        
     <script>
         document.querySelectorAll('.toggle-gallery').forEach(button => {
             button.addEventListener('click', () => {
@@ -670,13 +696,17 @@
 
                 allGalleries.forEach(g => g.classList.remove('open'));
                 allButtons.forEach(b => b.textContent = 'View Gallery');
-
+                
                 if (!isOpen) {
                     gallery.classList.add('open');
                     button.textContent = 'Hide Gallery';
                 }
             });
         });
+
+        function scrollToTop(){
+            window.scrollTo(0, 0);
+        }
     </script>
 
 
